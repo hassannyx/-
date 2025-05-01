@@ -4,41 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اختبار الكيمياء</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: white;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        .question {
-            display: none;
-            margin-top: 20px;
-        }
-        .active {
-            display: block;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- رابط لملف CSS -->
 </head>
 <body>
-
     <h1>اختبار الكيمياء بينك وبين الشخصيات</h1>
-    
-    <!-- الأسئلة -->
+
     <div class="question active">
         <p>سؤال 1: ما هو اللون المفضل لديك؟</p>
         <button onclick="nextQuestion()">التالي</button>
@@ -54,23 +24,6 @@
         <button onclick="nextQuestion()">التالي</button>
     </div>
 
-    <!-- ... أضف بقية الأسئلة هنا ... -->
-    
-    <!-- الشيفرة الخاصة بالأسئلة والزر -->
-    <script>
-        let currentQuestion = 0;
-        const questions = document.querySelectorAll(".question");
-
-        function nextQuestion() {
-            if (currentQuestion < questions.length - 1) {
-                questions[currentQuestion].classList.remove("active");  // إخفاء السؤال الحالي
-                currentQuestion++;  // الانتقال للسؤال التالي
-                questions[currentQuestion].classList.add("active");  // عرض السؤال التالي
-            } else {
-                alert("انتهى الاختبار!");
-            }
-        }
-    </script>
-
+    <script src="script.js"></script> <!-- رابط لملف JavaScript -->
 </body>
 </html>
