@@ -68,4 +68,12 @@ function showResult() {
   nextBtn.style.display = "none";
 }
 
+nextBtn.addEventListener("click", () => {
+  if (current < questions.length) {
+    showQuestion();
+  } else {
+    showResult();
+  }
+});
+
 showQuestion();
